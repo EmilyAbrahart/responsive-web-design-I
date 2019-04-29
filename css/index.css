@@ -99,11 +99,12 @@ h2{
 h3{
 	font-size: 1.5rem;
 }
-@media only screen and (max-width: 600px) {
-	h1,h2,h3 {
-		text-align: center;
-	}
-}
+@media only screen and (max-width: 800px) {
+    h3{
+        font-size: 1rem;
+    }
+    }
+    
 span.divider{
 	flex-grow:1;
 }
@@ -131,6 +132,12 @@ span.divider{
 }
 }
 
+@media only screen and (max-width: 500px){
+.logo{
+ width: 50%;
+}
+}
+
 nav{
 	width: 72%;
 	display: flex;
@@ -144,6 +151,24 @@ nav{
         width: 100%;
         order: 2;
     } 
+}
+
+@media only screen and (max-width: 500px){
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } 
+    
+    nav a{
+        padding: 1rem;
+        border-bottom: 1px solid black;
+        width: 100%;
+        text-align: center;
+    }
+    nav a:first-child{
+        border-top: 1px solid black;
+    }
 }
 
 a:link {
@@ -214,20 +239,20 @@ header h1 {
 .main-content section{
 	display: flex;
 	justify-content: space-between;
-	padding: 40px 0;
+	padding: 2.5rem 0;
 }
 
 .main-content section div {
     padding-right: 2rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
 	.main-content section{
 		flex-wrap: wrap;
-		margin: 0 1rem;
 	}
-	.main-content div{
-		margin: 1rem;
+	.main-content section div{
+        margin: 1rem;
+        padding: 0;
 	}
 }
 
@@ -239,13 +264,7 @@ header h1 {
 	padding: 30px 0;
 }
 
-@media only screen and (max-width: 600px) {
-	.contact{
-		text-align: center;
-	}
-}
-
-	footer{
+footer{
 	text-align: center;
 	padding: 30px;
 	margin-bottom: 50px;
