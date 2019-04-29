@@ -320,21 +320,23 @@ div.services-grid{
 	flex-wrap: wrap;
 	background-color: whitesmoke;
 	border: 1px solid black;
-	width: 48%;
-	padding: 1.25rem;
+	width: 100%;
+    align-items: center;
+    padding: 1rem;
 	margin-bottom: 1.8rem;
 }
 
-@media only screen and (max-width: 500px) {
+div.services-grid h3{
+    padding: 1rem;
+}
+
+@media only screen and (min-width: 500px) {
 	div.services-grid{
-		width: 100%;
-        align-items: center;
-        padding: 1rem;
+        width: 48%;
+        padding: 1.25rem;
+        align-items: flex-start;
     }
-    
-    div.services-grid h3{
-        padding: 1rem;
-    }
+  
     div.services-grid p{
         padding: 0 1rem 1rem;
     }
@@ -344,11 +346,13 @@ div.learn-more{
 	background-color: white;
 	border: 1px solid black;
 	border-radius: 5px;
-	width: 50%;
-	padding: 1rem 3rem;
+	padding: 1rem;
 	font-weight: bold;
 	text-align: center;
-	margin: 1.25rem 0 0;
+    margin: 1.25rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 section.services-facts-text{
@@ -360,11 +364,11 @@ section.services-facts-text{
 	flex-wrap: wrap;
 }
 div.services-facts-text, .services-info-img{
-	width: 49%;
+	width: 100%;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 500px) {
 	div.services-facts-text, .services-info-img{
-		width: 100%;
+		width: 49%;
 	}
  }
 
