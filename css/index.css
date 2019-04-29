@@ -53,23 +53,24 @@ table {
     box-sizing: border-box;
 }
 :root{
-    font-size: 16px;
+    font-size: 14px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 800px) {
 	:root{
-        font-size: 14px; 
+        font-size: 16px; 
 	}
  }
 
 html, body {
     height: 100%;
-	font-family: 'Titillium Web', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 1.5;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 800px) {
 	body{
-        line-height: 1.5; 
+        line-height: 1; 
 	}
  }
 
@@ -83,14 +84,14 @@ h1, h2, h3, h4, h5 {
 
 body{
 	max-width: 1024px;
-	margin: 0 auto;
+	margin: 2rem;
 	display: flex;
 	flex-direction: column;
 	font-size: 1em;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 1024px) {
 	body{
-		margin: 2rem;
+		margin: 0 auto;
 	}
  }
 
@@ -99,21 +100,21 @@ h1{
 }
 
 h2{
-	font-size: 3rem;
+	font-size: 2rem;
 }
 
 h3{
-	font-size: 1.5rem;
+	font-size: 1rem;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 800px) {
     h2{
-        font-size: 2rem;
+        font-size: 3rem;
     }
     }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 800px) {
      h3{
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 }
     
@@ -125,53 +126,64 @@ span.divider{
 ===========================================*/
 
 .navigation{
-	margin-top: 0.6rem;
-	display: flex;
+	margin-top: 0.3rem;
+    display: flex;
+    flex-direction: column;
 	justify-content: space-between;
 	align-items: center;	
 }
 
-@media only screen and (max-width: 800px){
-    .navigation{
-        flex-direction: column;
-        margin-top: 0.3rem;
-    }
 
-    .logo{
-        padding: 1rem;
+@media (min-width: 800px){
+    .navigation{
+        flex-direction: row;
+        margin-top: 0.6rem;
     }
 }
+
 
 nav{
-	width: 72%;
+	width: 100%;
 	display: flex;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-evenly;
     padding: 1rem;
+    order: 2;
 }
 
-@media only screen and (max-width: 800px){
+@media (min-width: 800px){
     nav{
-        width: 100%;
-        order: 2;
+        width: 72%;
+        order: 1;
     } 
+    a.home-link{
+        order: 2;
+    }
 }
 
-@media only screen and (max-width: 500px){
+nav a{
+    padding: 1rem;
+    border-bottom: 1px solid black;
+    width: 100%;
+    text-align: center;
+}
+
+nav a:first-child{
+     border-top: 1px solid black;
+}
+
+@media (min-width: 500px){
     nav{
-        display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     } 
-    
     nav a{
-        padding: 1rem;
-        border-bottom: 1px solid black;
-        width: 100%;
-        text-align: center;
+        width: auto;
+        border: none;
     }
     nav a:first-child{
-        border-top: 1px solid black;
+        border: none;
     }
 }
 
@@ -216,9 +228,13 @@ header h1 {
 	align-items: center;
 }
 
-@media only screen and (max-width: 800px) {
+img.header-img{
+    display: none;
+}
+
+@media only screen and (min-width: 800px) {
 	img.header-img{
-		display: none;
+		display: block;
 	}
 }
 
@@ -241,23 +257,28 @@ header h1 {
 }
 
 .main-content section{
-	display: flex;
+    display: flex;
+    flex-wrap: wrap;
 	justify-content: space-between;
 	padding: 2.5rem 0;
 }
-
-.main-content section div {
-    padding-right: 2rem;
+.top-content div{
+   padding: 1rem;
 }
 
-@media only screen and (max-width: 500px) {
-	.main-content section{
-		flex-wrap: wrap;
-	}
+@media (min-width: 500px) {
+
 	.main-content section div{
-        margin: 1rem;
-        padding: 0;
-	}
+        padding-right: 1rem;
+    }
+    .top-content div{
+        width: 45%;
+        flex-wrap: none;
+    }
+    .bottom-content div{
+        flex-wrap: none;
+        width: 30%;     
+    }
 }
 
 .middle-img{
