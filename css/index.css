@@ -67,6 +67,12 @@ html, body {
 	font-family: 'Titillium Web', sans-serif;
 }
 
+@media only screen and (max-width: 800px) {
+	body{
+        line-height: 1.5; 
+	}
+ }
+
 h1, h2, h3, h4, h5 {
     font-family: 'Bangers', cursive;
     letter-spacing: 1px;
@@ -100,10 +106,16 @@ h3{
 	font-size: 1.5rem;
 }
 @media only screen and (max-width: 800px) {
-    h3{
+    h2{
+        font-size: 2rem;
+    }
+    }
+
+@media only screen and (max-width: 800px) {
+     h3{
         font-size: 1rem;
     }
-    }
+}
     
 span.divider{
 	flex-grow:1;
@@ -120,22 +132,14 @@ span.divider{
 }
 
 @media only screen and (max-width: 800px){
-.navigation{
-    flex-direction: column;
-    margin-top: 0.3rem;
-}
+    .navigation{
+        flex-direction: column;
+        margin-top: 0.3rem;
+    }
 
-.logo{
-    order: 1;
-    padding: 1rem;
-    width: 20%;
-}
-}
-
-@media only screen and (max-width: 500px){
-.logo{
- width: 50%;
-}
+    .logo{
+        padding: 1rem;
+    }
 }
 
 nav{
@@ -261,13 +265,13 @@ header h1 {
 }
 
 .contact{
-	padding: 30px 0;
+	padding: 1.8rem 0;
 }
 
 footer{
 	text-align: center;
-	padding: 30px;
-	margin-bottom: 50px;
+	padding: 1.8rem;
+	margin-bottom: 3rem;
 }
 
 
@@ -285,7 +289,7 @@ section.services-container{
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-content: space-between;
-	padding: 40px 0;
+	padding: 2.5rem 0;
 }
 
 div.services-grid{
@@ -296,15 +300,23 @@ div.services-grid{
 	background-color: whitesmoke;
 	border: 1px solid black;
 	width: 48%;
-	padding: 20px;
-	margin-bottom: 30px;
+	padding: 1.25rem;
+	margin-bottom: 1.8rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
 	div.services-grid{
 		width: 100%;
-		align-items: center;
-	}
+        align-items: center;
+        padding: 1rem;
+    }
+    
+    div.services-grid h3{
+        padding: 1rem;
+    }
+    div.services-grid p{
+        padding: 0 1rem 1rem;
+    }
  }
 
 div.learn-more{
@@ -315,7 +327,7 @@ div.learn-more{
 	padding: 1rem 3rem;
 	font-weight: bold;
 	text-align: center;
-	margin: 20px 0 0;
+	margin: 1.25rem 0 0;
 }
 
 section.services-facts-text{
@@ -329,7 +341,7 @@ section.services-facts-text{
 div.services-facts-text, .services-info-img{
 	width: 49%;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
 	div.services-facts-text, .services-info-img{
 		width: 100%;
 	}
@@ -337,7 +349,7 @@ div.services-facts-text, .services-info-img{
 
 ul.services-facts{
 	flex-direction: column;
-	padding: 20px 0;
+	padding: 1.25rem 0;
 	list-style-type: disc;
 	list-style-position: inside;
 	line-height: 2;	}
